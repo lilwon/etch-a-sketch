@@ -1,74 +1,23 @@
-let gridContainer= document.getElementById('gridContainer');
+let gridContainer = document.querySelector('#gridContainer');
+gridContainer.className = 'grid';
 
-// put all divs in the #container
-const div1 = document.createElement('div');
-const div2 = document.createElement('div');
-const div3 = document.createElement('div');
-const div4 = document.createElement('div');
-const div5 = document.createElement('div');
-const div6 = document.createElement('div');
-const div7 = document.createElement('div');
-const div8 = document.createElement('div');
-const div9 = document.createElement('div');
-const div10 = document.createElement('div');
-const div11 = document.createElement('div');
-const div12 = document.createElement('div');
-const div13 = document.createElement('div');
-const div14 = document.createElement('div');
-const div15 = document.createElement('div');
-const div16 = document.createElement('div');
+function createGrid() {
+    for ( let i = 0; i < 16; i++ ) {
+        let row = document.createElement('div');
+        row.className = 'row'; 
+        row.id = `row${i}`;
 
-gridContainer.style.display = 'grid'; 
-gridContainer.style.gridTemplateColumns = 'repeat(4, 100px)';  
-gridContainer.style.gridTemplateRows = 'repeat(4, 100px)';
+        for ( let j = 0; j < 16; j++) {
+            let col = document.createElement('div');
+            col.className = 'col'; 
+            col.id = `col${i}`;
+            col.textContent = `col${i}`;
 
-div1.classList.add('div1');
-div1.textContent = 'div1';
-div2.classList.add('div2');
-div2.textContent = 'div2';
-div3.classList.add('div3');
-div3.textContent = 'div3';
-div4.classList.add('div4');
-div4.textContent = 'div4';
-div5.classList.add('div5');
-div5.textContent = 'div5';
-div6.classList.add('div6');
-div6.textContent = 'div6';
-div7.classList.add('div7');
-div7.textContent = 'div7';
-div8.classList.add('div8');
-div8.textContent = 'div8';
-div9.classList.add('div9');
-div9.textContent = 'div9';
-div10.classList.add('div10');
-div10.textContent = 'div10';
-div11.classList.add('div11');
-div11.textContent = 'div11';
-div12.classList.add('div12');
-div12.textContent = 'div12';
-div13.classList.add('div13');
-div13.textContent = 'div13';
-div14.classList.add('div14');
-div14.textContent = 'div14';
-div15.classList.add('div15');
-div15.textContent = 'div15';
-div16.classList.add('div16');
-div16.textContent = 'div16';
+            row.appendChild(col);
+        }
 
+        gridContainer.appendChild(row);
+    }
+}
 
-gridContainer.appendChild(div1);
-gridContainer.appendChild(div2);
-gridContainer.appendChild(div3);
-gridContainer.appendChild(div4);
-gridContainer.appendChild(div5);
-gridContainer.appendChild(div6);
-gridContainer.appendChild(div7);
-gridContainer.appendChild(div8);
-gridContainer.appendChild(div9);
-gridContainer.appendChild(div10);
-gridContainer.appendChild(div11);
-gridContainer.appendChild(div12);
-gridContainer.appendChild(div13);
-gridContainer.appendChild(div14);
-gridContainer.appendChild(div15);
-gridContainer.appendChild(div16);
+createGrid();
