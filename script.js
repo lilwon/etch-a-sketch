@@ -1,13 +1,20 @@
 let gridContainer = document.querySelector("#gridContainer");
 gridContainer.className = "grid";
 
-function createGrid() {
-    for ( let i = 0; i < 16; i++ ) {
+function createGrid(size) {
+
+    console.log(size);
+
+    if ( size == undefined ) {
+        size = 16; //default grid size 
+    }
+
+    for ( let i = 0; i < size ; i++ ) {
         let row = document.createElement("div");
         row.className = "row"; 
         row.id = `row${i}`; // might not need..
 
-        for ( let j = 0; j < 16; j++) {
+        for ( let j = 0; j < size; j++) {
             let col = document.createElement("div");
             // add two classes: col, addColor
             col.className = "col color";
@@ -31,10 +38,24 @@ function clearGrid() {
     }
 }
 
+function changeGrid() {
+    let input = prompt("Enter a number for the new size of your grid:"); 
+
+    const size = parseInt(input); 
+
+    if ( size === NaN) {
+        createGrid(16); 
+    }
+    else {
+        createGrid(size); 
+    }
+}
+
 function updateGrid() {
     // clear the grid
     clearGrid(); 
     //do prompt to ask how many squares for new grid..
+    changeGrid(); 
 }
 
 

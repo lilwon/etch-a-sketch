@@ -1,11 +1,14 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(16,40px);
-    grid-template-rows: repeat(16, 25px);
+    width: 560px;
+    height: 600px;
+    overflow: auto;
+    grid-template-columns: repeat(auto-fill, 35px);
 }
+
 
 .col { 
    border: 1px solid black;
-   padding: 20px; 
+   padding: 17.5px;
    content: center;
 }
