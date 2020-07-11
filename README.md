@@ -6,6 +6,6 @@
 <h2>To Do</h2>
 <ul>
     <li>Add random RGB color option </li>
-    <li>Add a background.<li>
+    <li>Add a background.</li>
 </ul>
 <p>Man..just make it look pretty I guess.</p>
