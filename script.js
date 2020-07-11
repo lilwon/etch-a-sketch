@@ -17,7 +17,6 @@ function createGrid(size) {
         row.className = "row"; 
         row.id = `row${i}`; // might not need..
 
-
         for ( let j = 0; j < size; j++) {
             let col = document.createElement("div");
             // add two classes: col, addColor
@@ -29,7 +28,6 @@ function createGrid(size) {
         }
         gridContainer.appendChild(row);
     }
-
     // adjust the col sizes for padding
     fixCols(size);
 
@@ -37,8 +35,6 @@ function createGrid(size) {
     // changes the entire grid template columns to the default size..
     document.getElementById("gridContainer").style = 
         `grid-template-columns: repeat(${size}, 1fr)`; 
-
-
 }
 
 // fixes the padding for the Column sizes..
@@ -68,14 +64,13 @@ function removeGrid() {
     while ( temp.hasChildNodes()) {
         temp.removeChild(temp.firstChild); 
     }
-
 }
 
 function changeGrid() {
     let input = prompt("Enter a number for the new size of your grid:"); 
     const size = parseInt(input); 
 
-    console.log(size);
+    console.log(size); // remove this
 
     // this doesn't work for some reason...
     if ( size === NaN) {
@@ -91,8 +86,7 @@ function changeGrid() {
 }
 
 function updateGrid() {
-    // clear the grid
-    clearGrid(); 
+    clearGrid();  // does it even need to clear the grid if user is going to change it?
     //do prompt to ask how many squares for new grid..
     changeGrid(); 
 }
