@@ -1,12 +1,9 @@
-const DEFAULTGRIDSIZE = 560;
+const DEFAULTGRIDSIZE = 560; // pixel size of
 
 let gridContainer = document.querySelector("#gridContainer");
 gridContainer.className = "grid";
 
-//document.getElementById("gridContainer").style = "width: 600px; height: 600px";
-//document.getElementById("gridContainer").style = "height: 600px";
-
-
+// still need to fix when user inputs nothing
 function createGrid(size) {
 
     console.log(size);
@@ -33,13 +30,13 @@ function createGrid(size) {
         gridContainer.appendChild(row);
     }
 
-    // adjust the col..
+    // adjust the col sizes for padding
     fixCols(size);
 
     const tempPix = DEFAULTGRIDSIZE / size; 
     // changes the entire grid template columns to the default size..
     document.getElementById("gridContainer").style = 
-        `grid-template-columns: repeat(${size}, ${tempPix}px)`; 
+        `grid-template-columns: repeat(${size}, 1fr)`; 
 
 
 }
@@ -53,6 +50,7 @@ function fixCols(size) {
     }
 }
 
+// change to random rgb later
 function addColor() {
     this.style.backgroundColor = "blue";
 }
@@ -79,6 +77,7 @@ function changeGrid() {
 
     console.log(size);
 
+    // this doesn't work for some reason...
     if ( size === NaN) {
         console.log("NaN if");
         createGrid(16);
@@ -99,7 +98,7 @@ function updateGrid() {
 }
 
 // Does the "hover" effect
-// It's own function otherwise it would never run the second time after "reset"
+// It's own function otherwise it would never run the second time after eset
 function hoverEffect() {
     let pixels = document.getElementsByClassName("color");
     for ( let i = 0; i < pixels.length; i++ ) {
@@ -107,5 +106,6 @@ function hoverEffect() {
     }
 }
 
+// first run.
 createGrid();
 hoverEffect(); 
