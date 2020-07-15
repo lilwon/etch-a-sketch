@@ -65,25 +65,22 @@ function clearGrid() {
 
 function removeGrid() {
     let temp = document.getElementById("gridContainer");
-
     while ( temp.hasChildNodes()) {
         temp.removeChild(temp.firstChild); 
     }
 }
 
 function changeGrid() {
-    let input = prompt("Enter a number for the new size of your grid. Note the bigger the number the longer it will take..."); 
-    const size = parseInt(input); 
-
-    console.log(size); // remove this
-
+    let input = prompt("Enter a number for the new size of your grid." + 
+        " Note the larger the number the longer it will take to load"); 
     // this doesn't work for some reason...
-    if ( size === NaN) {
-        console.log("NaN if");
+    if ( isNaN(parseInt(input))) {
+        removeGrid(); 
         createGrid(16);
         hoverEffect();  
     }
     else {
+        const size = parseInt(input);
         removeGrid(); 
         createGrid(size);
         hoverEffect(); 
