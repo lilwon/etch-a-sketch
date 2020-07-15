@@ -46,9 +46,14 @@ function fixCols(size) {
     }
 }
 
-// change to random rgb later
-function addColor() {
-    this.style.backgroundColor = "blue";
+// normal
+function addBlackColor() {
+    this.style.backgroundColor = "black";
+}
+
+// optional
+function addRGBColor() {
+    this.style.backgroundColor = `hsla(${Math.random() * 360}, 75%, 50%, 1)`;  
 }
 
 function clearGrid() {
@@ -67,7 +72,7 @@ function removeGrid() {
 }
 
 function changeGrid() {
-    let input = prompt("Enter a number for the new size of your grid:"); 
+    let input = prompt("Enter a number for the new size of your grid. Note the bigger the number the longer it will take..."); 
     const size = parseInt(input); 
 
     console.log(size); // remove this
@@ -96,7 +101,7 @@ function updateGrid() {
 function hoverEffect() {
     let pixels = document.getElementsByClassName("color");
     for ( let i = 0; i < pixels.length; i++ ) {
-        pixels[i].addEventListener("mouseover", addColor);
+        pixels[i].addEventListener("mouseover", addBlackColor);
     }
 }
 
