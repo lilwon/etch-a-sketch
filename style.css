@@ -14,15 +14,23 @@ button {
     font-family: "Fira Sans", sans-serif;
     margin: 15px;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 24px;
-    width: 145px;
-    height: 57px;
+    width: 130px;
+    height: 40px;
+}
+
+.darkMode {
+}
+
+.navBar {
+    height: 40px;
+    width: 100%;
+    background-color: white; 
 }
 
 .buttonLayout {
     margin: 20px;
-    
 }
 
 .flexContainer {
@@ -30,6 +38,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin: 150px 0px 0px -200px; 
 }
 
 .grid {

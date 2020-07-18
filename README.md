@@ -5,7 +5,10 @@
 
 <h2>To Do</h2>
 <ul>
-    <li>Add random RGB color option </li>
-    <li>Add a background.</li>
+    <li>Create a navbar</li>
+    <li>Create a dark theme and light theme<li>
 </ul>
 <p>Man..just make it look pretty I guess.</p>
+
+<h2>Color Scheme</h2>
+<p>Looking into the <a href="https://www.nordtheme.com/#palettes-modularity">Nord Theme</a> for colors.</p>
