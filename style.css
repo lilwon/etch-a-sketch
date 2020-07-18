@@ -9,7 +9,20 @@ body {
 }
 
 button {
+    display: block;
+    cursor: pointer; 
     font-family: "Fira Sans", sans-serif;
+    margin: 15px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 24px;
+    width: 145px;
+    height: 57px;
+}
+
+.buttonLayout {
+    margin: 20px;
+    
 }
 
 .flexContainer {

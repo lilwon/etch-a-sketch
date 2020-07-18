@@ -51,7 +51,7 @@ function addBlackColor() {
     this.style.backgroundColor = "black";
 }
 
-// optional
+// RGB colors
 function addRGBColor() {
     this.style.backgroundColor = `hsla(${Math.random() * 360}, 75%, 50%, 1)`;  
 }
@@ -73,17 +73,16 @@ function removeGrid() {
 function changeGrid() {
     let input = prompt("Enter a number for the new size of your grid." + 
         " Note the larger the number the longer it will take to load"); 
-    // this doesn't work for some reason...
     if ( isNaN(parseInt(input))) {
         removeGrid(); 
         createGrid(16);
-        hoverEffect();  
+        blackWhite(); 
     }
     else {
         const size = parseInt(input);
         removeGrid(); 
         createGrid(size);
-        hoverEffect(); 
+        blackWhite();
     }
 }
 
@@ -95,7 +94,14 @@ function updateGrid() {
 
 // Does the "hover" effect
 // It's own function otherwise it would never run the second time after eset
-function hoverEffect() {
+function RGBColor(color) {
+    let pixels = document.getElementsByClassName("color");
+    for ( let i = 0; i < pixels.length; i++ ) {
+        pixels[i].addEventListener("mouseover", addRGBColor);
+    }
+}
+
+function blackWhite() {
     let pixels = document.getElementsByClassName("color");
     for ( let i = 0; i < pixels.length; i++ ) {
         pixels[i].addEventListener("mouseover", addBlackColor);
@@ -104,4 +110,4 @@ function hoverEffect() {
 
 // first run.
 createGrid();
-hoverEffect(); 
+blackWhite(); // default color 
