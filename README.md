@@ -6,7 +6,7 @@
 <h2>To Do</h2>
 <ul>
     <li>Create a navbar</li>
-    <li>Create a dark theme and light theme<li>
+    <li>Create a dark theme and light theme</li>
 </ul>
 <p>Man..just make it look pretty I guess.</p>
 

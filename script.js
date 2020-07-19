@@ -5,13 +5,9 @@ gridContainer.className = "grid";
 
 // still need to fix when user inputs nothing
 function createGrid(size) {
-
-    console.log(size);
-
     if ( size == undefined || size === NaN ) {
         size = 16; //default grid size 
     }
-
     for ( let i = 0; i < size ; i++ ) {
         let row = document.createElement("div");
         row.className = "row"; 

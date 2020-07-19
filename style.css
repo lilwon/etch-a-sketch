@@ -3,8 +3,9 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: lightgray;
+    background-color: #d8dee9;
     font-family: "Fira Sans", sans-serif;
+    font-size: 14px;
     overflow: hidden;
 }
 
@@ -21,12 +22,22 @@ button {
 }
 
 .darkMode {
+   background-color: #2e3440; 
 }
 
-.navBar {
+.navBar-light {
     height: 40px;
     width: 100%;
-    background-color: white; 
+    background-color: #eceff4;
+}
+
+.navBar-light a {
+    text-decoration: none;
+}
+
+.navBar-right {
+    float: right;
+    margin: 10px 20px;
 }
 
 .buttonLayout {
