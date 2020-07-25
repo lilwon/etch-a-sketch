@@ -21,8 +21,14 @@ button {
     height: 40px;
 }
 
+.darkIcon {
+    cursor: pointer; 
+    user-select: none;
+}
+
 .darkMode {
-   background-color: #2e3440; 
+    background-color: #2e3440;
+    color: #4c566a;
 }
 
 .navBar-light {
@@ -34,6 +40,7 @@ button {
 .navBar-light a {
     text-decoration: none;
 }
+
 
 .navBar-right {
     float: right;

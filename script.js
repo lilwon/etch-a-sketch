@@ -104,6 +104,17 @@ function blackWhite() {
     }
 }
 
+// toggle dark mode
+function darkMode() {
+    const body = document.body; 
+    body.classList.toggle("darkMode");
+
+    let x = document.getElementById("dkMode").innerText;
+    document.getElementById("dkMode").innerText = 
+        (x == "brightness_3") ? "wb_sunny" : "brightness_3";
+
+}
+
 // first run.
 createGrid();
 blackWhite(); // default color 
