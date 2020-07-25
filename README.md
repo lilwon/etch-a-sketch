@@ -5,8 +5,9 @@
 
 <h2>To Do</h2>
 <ul>
-    <li>Create a navbar</li>
-    <li>Create a dark theme and light theme</li>
+    <li>Update info on NavBar</li>
+    <li>Add more to dark theme and light theme</li>
+    <li>Add a tool tip to certain info on NavBar</li>
 </ul>
 <p>Man..just make it look pretty I guess.</p>
 
