@@ -38,18 +38,15 @@ button {
     background-color: #eceff4;
 }
 
-.navBar-light a {
+.navBar-light link {
     text-decoration: none;
+    color: #4c566a;
+    padding: 5px 20px; 
 }
-
 
 .navBar-right {
     float: right;
     margin: 10px 20px;
-}
-
-.navBar-right i{
-    padding: 0px 5px;
 }
 
 .buttonLayout {
