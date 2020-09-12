@@ -82,6 +82,11 @@ function changeGrid() {
     }
 }
 
+// only reset the grid
+function resetGrid() {
+    clearGrid(); 
+}
+
 function updateGrid() {
     clearGrid();  // does it even need to clear the grid if user is going to change it?
     //do prompt to ask how many squares for new grid..
