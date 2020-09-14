@@ -2,9 +2,9 @@
 <html>
     <header>
         <meta charset="UTF-8">
-        <title>Etch-a-Sketch</title>
+        <title>Etch-A-Sketch</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fira+Sans&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </header>
@@ -17,12 +17,20 @@
                     brightness_3</i>
             </div>
         </div>
+        <div>
+            <h1 class="title">Etch-A-Sketch</h1>
+        </div>
         <div class="flexContainer">
             <div class="buttonLayout">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
                 <button onclick="resetGrid()">Reset Grid</button>
                 <button onclick="updateGrid()">Adjust Size</button>
                 <button onclick="RGBColor()">RGB Mode</button>
             </div>
+            <div>
                 <section id="gridContainer"></section>
             </div>
         </div>

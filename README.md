@@ -1,13 +1,12 @@
 # Etch-a-Sketch
-This project was inspired by The Odin Project
+View my project [here](https://lilwon.github.io/etch-a-sketch/)
+This project is part of The Odin Project curriculum
 
 ## Intro
 A web version of the physical etch-a-sketch toy! 
 
 ## To Do
-* Update info on NavBar
 * Add more to dark theme and light theme
-* Add a tool tip to certain info on NavBar
  
 Overall, make it look better.
 
