@@ -110,11 +110,11 @@ input:checked + .slider:before{
     transform: translateX(47px);
 }
 
-.slider.round {
+.slider {
     border-radius: 34px;
 }
 
-.slider.round:before  {
+.slider:before  {
     border-radius: 50%;
 }
 
