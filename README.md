@@ -8,7 +8,9 @@ A web version of the physical etch-a-sketch toy!
 ## To Do
 * Add more to dark theme and light theme
  
-Overall, make it look better.
+
+## Bugs
+* Toggling from RGB Off to RGB On works only once. 
 
 # Color Scheme
 Looking into the [Nord Theme](https://www.nordtheme.com/#palettes-modularity) for colors.

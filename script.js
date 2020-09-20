@@ -95,7 +95,7 @@ function updateGrid() {
 
 // Does the "hover" effect
 // It's own function otherwise it would never run the second time after eset
-function RGBColor(color) {
+function RGBColor() {
     let pixels = document.getElementsByClassName("color");
     for ( let i = 0; i < pixels.length; i++ ) {
         pixels[i].addEventListener("mouseover", addRGBColor);
@@ -120,6 +120,32 @@ function darkMode() {
 
 }
 
+function changeToggleText() {
+    let text = document.getElementById("chooseMode").innerText;
+    document.getElementById("chooseMode").innerText = 
+        ( text == "RGB On") ? "RGB Off" : "RGB On"; 
+}
+
 // first run.
 createGrid();
-blackWhite(); // default color 
+blackWhite();
+
+// used to for the toggle color
+document.addEventListener("DOMContentLoaded", function() {
+
+    var checkbox = document.querySelector(`input[type="checkbox"]`);
+
+    checkbox.addEventListener("click", function() {
+        if ( checkbox.checked) {
+            changeToggleText();
+            console.log("Checked");
+            RGBColor();
+        }
+        else {
+            changeToggleText();
+            console.log("Not Checked");
+            blackWhite();
+        }
+    });
+
+})
