@@ -68,7 +68,7 @@ function removeGrid() {
 
 function changeGrid() {
     let input = prompt("Enter a number for the new size of your grid." + 
-        " Note the larger the number the longer it will take to load"); 
+        " (The maximum size is 100. Default is 16.)"); 
     if ( isNaN(parseInt(input))) {
         removeGrid(); 
         createGrid(16);
@@ -76,9 +76,18 @@ function changeGrid() {
     }
     else {
         const size = parseInt(input);
-        removeGrid(); 
-        createGrid(size);
-        blackWhite();
+        // put limitation on grid size
+        if ( size > 0 && size < 101) {
+            removeGrid(); 
+            createGrid(size);
+            blackWhite();
+        }
+        else {
+            // default grid size
+            removeGrid(); 
+            createGrid(16);
+            blackWhite();
+        }
     }
 }
 
