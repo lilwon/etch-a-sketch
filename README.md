@@ -1,8 +1,5 @@
 # Etch-a-Sketch
 View my project [here](https://lilwon.github.io/etch-a-sketch/)
-This project is part of The Odin Project curriculum
-
-## Intro
 A web version of the physical etch-a-sketch toy! 
 
 ## To Do
@@ -11,6 +8,10 @@ A web version of the physical etch-a-sketch toy!
 
 ## Bugs
 * Toggling from RGB Off to RGB On works only once. 
+* If you toggle back to "RGB Off" the RGB mode is still on. This is because
+the color settings uses a for loop. When an event listener activates it stays
+on the previous action listener. Probably need to rewrite the functions and make
+toggle using css. 
 
 # Color Scheme
 Looking into the [Nord Theme](https://www.nordtheme.com/#palettes-modularity) for colors.

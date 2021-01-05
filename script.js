@@ -44,7 +44,7 @@ function fixCols(size) {
 
 // normal
 function addBlackColor() {
-    this.style.backgroundColor = "black";
+    this.style.backgroundColor = `hsla(0, 0%, 0%, 1)`; 
 }
 
 // RGB colors
@@ -136,19 +136,32 @@ function changeToggleText() {
         ( text == "RGB On") ? "RGB Off" : "RGB On"; 
 }
 
-// first run.
-createGrid();
-blackWhite();
+function checkBoxClick() {
+    var checkBox = document.getElementById("testCheckBox");
 
+    if ( checkBox.checked == true) {
+        changeToggleText();
+        console.log("Checked"); 
+        RGBColor(); 
+    }
+    else {
+        changeToggleText();
+        console.log("Not checked");
+        blackWhite();
+    }
+}
+
+/*
 // used for the toggle color
 document.addEventListener("DOMContentLoaded", function() {
 
     var checkbox = document.querySelector(`input[type="checkbox"]`);
 
     checkbox.addEventListener("click", function() {
-        if ( checkbox.checked) {
+        if ( checkbox.checked == true) {
             changeToggleText();
             console.log("Checked");
+            //RGBColor();
             RGBColor();
         }
         else {
@@ -157,5 +170,9 @@ document.addEventListener("DOMContentLoaded", function() {
             blackWhite();
         }
     });
+});
+*/
 
-})
+// first run.
+createGrid();
+blackWhite();
