@@ -68,7 +68,7 @@ function removeGrid() {
 
 function changeGrid() {
     let input = prompt("Enter a number for the new size of your grid." + 
-        " (The maximum size is 100. Default is 16.)"); 
+        " (The maximum size is 54. Default size 16.)"); 
     if ( isNaN(parseInt(input))) {
         removeGrid(); 
         createGrid(16);
@@ -77,13 +77,14 @@ function changeGrid() {
     else {
         const size = parseInt(input);
         // put limitation on grid size
-        if ( size > 0 && size < 101) {
+        if ( size > 0 && size < 55) {
             removeGrid(); 
             createGrid(size);
             blackWhite();
         }
         else {
             // default grid size
+            alert("Sorry, a value greater than 54 will slow the webpage.");
             removeGrid(); 
             createGrid(16);
             blackWhite();
@@ -139,7 +140,7 @@ function changeToggleText() {
 createGrid();
 blackWhite();
 
-// used to for the toggle color
+// used for the toggle color
 document.addEventListener("DOMContentLoaded", function() {
 
     var checkbox = document.querySelector(`input[type="checkbox"]`);
